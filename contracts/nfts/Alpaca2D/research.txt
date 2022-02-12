@@ -1,0 +1,7 @@
+One possible whitelist address
+https://etherscan.io/address/0x0f0cb548a8332dbbbcda615a4c0e9a12310fe42b
+
+old 2D Alpaca contract
+https://etherscan.io/address/0x3db5463a9e2d04334192c6f2dd4b72def4751a61#code
+
+3D Alpaca whitelist will be generated only before the mint and saved to contract ROOT
