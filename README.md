@@ -22,3 +22,7 @@ Solidity contracts at /contracts/...
 - [nfts/OxyaOriginProject](https://etherscan.io/address/0xe106c63e655df0e300b78336af587f300cff9e76)
 - [nfts/Pixelmon](https://etherscan.io/address/0x32973908faee0bf825a343000fe412ebe56f802a)
 - [nfts/SuperNormal](https://etherscan.io/address/0xd532b88607b1877fe20c181cba2550e3bbd6b31c)
+- [nfts/CityDAO](https://etherscan.io/address/0x7eef591a6cc0403b9652e98e88476fe1bf31ddeb)
+- [nfts/Gooniez-ERC21-with-ERC20](https://etherscan.io/address/0x18cd9fda7d584401d04e30bf73fb0013efe65bb0)
+- [nfts/ConiunIO-ERC721A](https://etherscan.io/address/0x03ef30e1aee25abd320ad961b8cd31aa1a011c97)
+- [nfts/Doodles/SpaceDoodles](https://etherscan.io/address/0x620b70123fb810f6c653da7644b5dd0b6312e4d8)
