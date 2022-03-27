@@ -1,14 +1,10 @@
 # About
 
-Solidity contracts at /contracts/...
+This repo record some smart contract sample codes and techniques.
 
-- [chainlink/FeedsNFT](https://youtu.be/nS9xP1hxg3w) Use Chainlink to generate dynamic SVG image for token uri value
-- [chainlink/TeslaConsumer](https://blog.chain.link/create-tesla-smart-contract-rental/) Use Chainlink to connect Tesla Vehicle API
-- [nextjs-marketplace/NFT](https://youtu.be/GKJBEEXUha0) How to Build a Full Stack NFT Marketplace
-- [nextjs-marketplace/Market](https://youtu.be/GKJBEEXUha0) How to Build a Full Stack NFT Marketplace
+## NFT projects
 
-- nfts/fullcopy/* NFT project contract full copy without, import "@openzeppelin/*"
-- [nfts/base/*](https://openzeppelin.com/) Everything related to the ERC721 base contracts or utilities
+- [nfts/@openzeppelin/*](https://openzeppelin.com/) Everything related to the ERC721 base contracts or utilities
 - [nfts/hashlips/*](https://github.com/HashLips) Everything related to HashLips tutorial sample contracts
 - [nfts/Alpaca2D](https://etherscan.io/address/0x3db5463a9e2d04334192c6f2dd4b72def4751a61)
 - [nfts/Karafuru](https://etherscan.io/address/0xd2f668a8461d6761115daf8aeb3cdf5f40c532c6)
@@ -27,3 +23,20 @@ Solidity contracts at /contracts/...
 - [nfts/ConiunIO-ERC721A](https://etherscan.io/address/0x03ef30e1aee25abd320ad961b8cd31aa1a011c97)
 - [nfts/Doodles/SpaceDoodles](https://etherscan.io/address/0x620b70123fb810f6c653da7644b5dd0b6312e4d8)
 - [nfts/MURI](https://etherscan.io/address/0x4b61413d4392c806e6d0ff5ee91e6073c21d6430)
+
+### HOW-TO techniques
+
+- [nfts/HOW-TO-ProxyRegistry-Opensea/*](https://gist.github.com/dievardump/483eb43bc6ed30b14f01e01842e3339b): (Use in your own risk as it can be dangerous) How to work with proxy registry for Opensea addresses
+- [nfts/HOW-TO-SignMessage-ECDSA/*](https://docs.openzeppelin.com/contracts/2.x/utilities): How to do ECDSA signature
+- [nfts/HOW-TO-Random-Basic/*](https://fravoll.github.io/solidity-patterns/randomness.html): How to do basic on-chain randomness
+
+## Chainlink codes
+
+- [chainlink/VRF](https://youtu.be/JqZWariqh5s) Use Chainlink to generate random numbers
+- [chainlink/FeedsNFT](https://youtu.be/nS9xP1hxg3w) Use Chainlink to generate dynamic SVG image for token uri value
+- [chainlink/TeslaConsumer](https://blog.chain.link/create-tesla-smart-contract-rental/) Use Chainlink to connect Tesla Vehicle API
+
+## Next.js sample codes
+
+- [nextjs-marketplace/NFT](https://youtu.be/GKJBEEXUha0) How to Build a Full Stack NFT Marketplace
+- [nextjs-marketplace/Market](https://youtu.be/GKJBEEXUha0) How to Build a Full Stack NFT Marketplace
