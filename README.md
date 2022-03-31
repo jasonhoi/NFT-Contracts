@@ -25,6 +25,8 @@ This repo record some smart contract sample codes and techniques.
 - [contracts/nfts/MURI](https://etherscan.io/address/0x4b61413d4392c806e6d0ff5ee91e6073c21d6430) ERC721A NFT
 - [contracts/nfts/LateDAO](https://etherscan.io/address/0x9717e477cc5869a4a228361492b9bf7b8db58582) ERC721A NFT with ECDSA sinature whitelist
 - [contracts/nfts/CyberBrokers](https://etherscan.io/address/0x892848074ddea461a15f337250da3ce55580ca85) A first-of-its-kind NFT fully on-chain SVG JSON data
+- [contracts/nfts/MutantShibaClub](https://etherscan.io/address/0xca95777971c7c438eecbd8bfc23249fbee99e716) ERC721A NFT
+- [contracts/nfts/Impostors](https://etherscan.io/address/0x3110ef5f612208724ca51f5761a69081809f03b7) ERC721 with gas saving similar to ERC721A but not implemanting it
 
 ### HOW-TO techniques
 
