@@ -5,6 +5,7 @@ This repo record some smart contract sample codes and techniques.
 ## NFT projects
 
 - [contracts/nfts/@openzeppelin/*](https://openzeppelin.com/) Everything related to the ERC721 base contracts or utilities
+- [contracts/nfts/3Landers/*](https://etherscan.io/address/0xb4d06d46a8285f4ec79fd294f78a881799d8ced9#code) ERC721 wirh VRF random token id, EIP712 whitelisting
 - [contracts/nfts/hashlips/*](https://github.com/HashLips) Everything related to HashLips tutorial sample contracts
 - [contracts/nfts/Alpaca2D](https://etherscan.io/address/0x3db5463a9e2d04334192c6f2dd4b72def4751a61)
 - [contracts/nfts/Karafuru](https://etherscan.io/address/0xd2f668a8461d6761115daf8aeb3cdf5f40c532c6)
@@ -23,7 +24,7 @@ This repo record some smart contract sample codes and techniques.
 - [contracts/nfts/ConiunIO-ERC721A](https://etherscan.io/address/0x03ef30e1aee25abd320ad961b8cd31aa1a011c97)
 - [contracts/nfts/Doodles/SpaceDoodles](https://etherscan.io/address/0x620b70123fb810f6c653da7644b5dd0b6312e4d8)
 - [contracts/nfts/MURI](https://etherscan.io/address/0x4b61413d4392c806e6d0ff5ee91e6073c21d6430) ERC721A NFT
-- [contracts/nfts/LateDAO](https://etherscan.io/address/0x9717e477cc5869a4a228361492b9bf7b8db58582) ERC721A NFT with ECDSA sinature whitelist
+- [contracts/nfts/LateDAO](https://etherscan.io/address/0x9717e477cc5869a4a228361492b9bf7b8db58582) ERC721A NFT with ECDSA whitelisting
 - [contracts/nfts/CyberBrokers](https://etherscan.io/address/0x892848074ddea461a15f337250da3ce55580ca85) A first-of-its-kind NFT fully on-chain SVG JSON data
 - [contracts/nfts/MutantShibaClub](https://etherscan.io/address/0xca95777971c7c438eecbd8bfc23249fbee99e716) ERC721A NFT
 - [contracts/nfts/Impostors](https://etherscan.io/address/0x3110ef5f612208724ca51f5761a69081809f03b7) ERC721 with gas saving similar to ERC721A but not implemanting it
