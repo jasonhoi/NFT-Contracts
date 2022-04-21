@@ -4,9 +4,9 @@ This repo record some smart contract sample codes and techniques.
 
 ## NFT projects
 
-- [contracts/nfts/@openzeppelin/*](https://openzeppelin.com/) Everything related to the ERC721 base contracts or utilities
+- [contracts/nfts/@chainlink/*](https://openzeppelin.com/) Chainlink contracts
+- [contracts/nfts/@openzeppelin/*](https://openzeppelin.com/) OZ contracts
 - [contracts/nfts/3Landers/*](https://etherscan.io/address/0xb4d06d46a8285f4ec79fd294f78a881799d8ced9#code) ERC721 wirh VRF random token id, EIP712 whitelisting
-- [contracts/nfts/hashlips/*](https://github.com/HashLips) Everything related to HashLips tutorial sample contracts
 - [contracts/nfts/Alpaca2D](https://etherscan.io/address/0x3db5463a9e2d04334192c6f2dd4b72def4751a61)
 - [contracts/nfts/Karafuru](https://etherscan.io/address/0xd2f668a8461d6761115daf8aeb3cdf5f40c532c6)
 - [contracts/nfts/AZUKI](https://etherscan.io/address/0xed5af388653567af2f388e6224dc7c4b3241c544)
