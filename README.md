@@ -4,9 +4,9 @@ This repo record some smart contract sample codes and techniques.
 
 ## NFT projects
 
-- [contracts/nfts/@chainlink/*](https://openzeppelin.com/) Chainlink contracts
-- [contracts/nfts/@openzeppelin/*](https://openzeppelin.com/) OZ contracts
-- [contracts/nfts/3Landers/*](https://etherscan.io/address/0xb4d06d46a8285f4ec79fd294f78a881799d8ced9#code) ERC721 wirh VRF random token id, EIP712 whitelisting
+- [contracts/nfts/@chainlink](https://openzeppelin.com/) Chainlink contracts
+- [contracts/nfts/@openzeppelin](https://openzeppelin.com/) OZ contracts
+- [contracts/nfts/3Landers](https://etherscan.io/address/0xb4d06d46a8285f4ec79fd294f78a881799d8ced9#code) ERC721 wirh VRF random token id, EIP712 whitelisting
 - [contracts/nfts/Alpaca2D](https://etherscan.io/address/0x3db5463a9e2d04334192c6f2dd4b72def4751a61)
 - [contracts/nfts/Karafuru](https://etherscan.io/address/0xd2f668a8461d6761115daf8aeb3cdf5f40c532c6)
 - [contracts/nfts/AZUKI](https://etherscan.io/address/0xed5af388653567af2f388e6224dc7c4b3241c544)
@@ -30,6 +30,7 @@ This repo record some smart contract sample codes and techniques.
 - [contracts/nfts/MutantShibaClub](https://etherscan.io/address/0xca95777971c7c438eecbd8bfc23249fbee99e716) ERC721A NFT
 - [contracts/nfts/Impostors](https://etherscan.io/address/0x3110ef5f612208724ca51f5761a69081809f03b7) ERC721 with gas saving similar to ERC721A but not implemanting it
 - [contracts/nfts/RTFKT](https://etherscan.io/address/0x86825dfca7a6224cfbd2da48e85df2fc3aa7c4b1) RTFKT ERC 1155 burnable to convert to ERC 721 NFT and 2 items
+- [contracts/nfts/Otherside](https://etherscan.io/address/0x86825dfca7a6224cfbd2da48e85df2fc3aa7c4b1) BAYC Otherside land contract, ERC721Enumerable
 
 ### HOW-TO techniques
 
