@@ -6,6 +6,8 @@ This repo record some smart contract sample codes and techniques.
 
 - [contracts/nfts/@chainlink](https://openzeppelin.com/) Chainlink contracts
 - [contracts/nfts/@openzeppelin](https://openzeppelin.com/) OZ contracts
+- [contracts/nfts/ERC-721A](https://github.com/chiru-labs/ERC721A/releases) Keep track of ERC-721A update changes
+- [contracts/nfts/ERC-721psi](https://github.com/estarriolvetch/ERC721Psi/releases) Keep track of ERC-721psi update changes
 - [contracts/nfts/3Landers](https://etherscan.io/address/0xb4d06d46a8285f4ec79fd294f78a881799d8ced9#code) ERC721 wirh VRF random token id, EIP712 whitelisting
 - [contracts/nfts/Alpaca2D](https://etherscan.io/address/0x3db5463a9e2d04334192c6f2dd4b72def4751a61)
 - [contracts/nfts/Karafuru](https://etherscan.io/address/0xd2f668a8461d6761115daf8aeb3cdf5f40c532c6)
