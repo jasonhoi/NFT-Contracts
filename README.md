@@ -33,7 +33,8 @@ This repo record some smart contract sample codes and techniques.
 - [contracts/nfts/RTFKT](https://etherscan.io/address/0x86825dfca7a6224cfbd2da48e85df2fc3aa7c4b1) RTFKT ERC 1155 burnable to convert to ERC-721 NFT and 2 items
 - [contracts/nfts/Otherside](https://etherscan.io/address/0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258) BAYC Otherside land contract, ERC721Enumerable
 - [contracts/nfts/OxyanOrigin/](https://etherscan.io/address/0xe106c63e655df0e300b78336af587f300cff9e76) Oxyan Origin NFT, staking contracts
-- [contracts/nfts/OxyanOrigin/](https://etherscan.io/address/0xFbFFbe6F2e0f4b5D0C3DA9b6813d99a4F18fB358) Pledge Mint auto minting
+- [contracts/nfts/PledgeMint.sol](https://etherscan.io/address/0xFbFFbe6F2e0f4b5D0C3DA9b6813d99a4F18fB358) Pledge Mint for CultureCubsOfficial, `https://culturecubs.pledgemint.io`
+- [contracts/nfts/(N/A)](https://etherscan.io/address/0xAc047cF33CBAcEd70E77Efb41Cff705A31031d26) CultureCubsOfficial NFT contract (unverified)
 
 ### HOW-TO techniques
 
