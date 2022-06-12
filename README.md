@@ -29,11 +29,13 @@ This repo record some smart contract sample codes and techniques.
 - [contracts/nfts/LateDAO](https://etherscan.io/address/0x9717e477cc5869a4a228361492b9bf7b8db58582) ERC721A NFT with ECDSA whitelisting
 - [contracts/nfts/CyberBrokers](https://etherscan.io/address/0x892848074ddea461a15f337250da3ce55580ca85) A first-of-its-kind NFT fully on-chain SVG JSON data
 - [contracts/nfts/MutantShibaClub](https://etherscan.io/address/0xca95777971c7c438eecbd8bfc23249fbee99e716) ERC721A NFT
-- [contracts/nfts/Impostors](https://etherscan.io/address/0x3110ef5f612208724ca51f5761a69081809f03b7) ERC721 with gas saving similar to ERC721A but not implemanting it
-- [contracts/nfts/RTFKT](https://etherscan.io/address/0x86825dfca7a6224cfbd2da48e85df2fc3aa7c4b1) RTFKT ERC 1155 burnable to convert to ERC 721 NFT and 2 items
+- [contracts/nfts/Impostors](https://etherscan.io/address/0x3110ef5f612208724ca51f5761a69081809f03b7) ERC721 with gas saving similar to ERC-721A but not implemanting it
+- [contracts/nfts/RTFKT](https://etherscan.io/address/0x86825dfca7a6224cfbd2da48e85df2fc3aa7c4b1) RTFKT ERC 1155 burnable to convert to ERC-721 NFT and 2 items
 - [contracts/nfts/Otherside](https://etherscan.io/address/0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258) BAYC Otherside land contract, ERC721Enumerable
 - [contracts/nfts/OxyanOrigin/](https://etherscan.io/address/0xe106c63e655df0e300b78336af587f300cff9e76) Oxyan Origin NFT
 - [contracts/nfts/OxyanOrigin/](https://etherscan.io/address/0xbba10c994e2780b459cf6511d9ad3d4f5d38b5a1) Oxyan Staking contract
+- [contracts/nfts/CultureCubsOfficial/PledgeMint.sol](https://etherscan.io/address/0xFbFFbe6F2e0f4b5D0C3DA9b6813d99a4F18fB358) Pledge Mint for CultureCubsOfficial, `https://culturecubs.pledgemint.io`
+- [contracts/nfts/CultureCubsOfficial](https://etherscan.io/address/0xAc047cF33CBAcEd70E77Efb41Cff705A31031d26) CultureCubsOfficial owner address
 
 ### HOW-TO techniques
 
