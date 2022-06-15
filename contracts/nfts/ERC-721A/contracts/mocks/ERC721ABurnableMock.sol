@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// ERC721A Contracts v3.3.0
+// ERC721A Contracts v4.1.0
 // Creators: Chiru Labs
 
 pragma solidity ^0.8.4;
@@ -18,10 +18,18 @@ contract ERC721ABurnableMock is ERC721A, ERC721ABurnable {
     }
 
     function getOwnershipAt(uint256 index) public view returns (TokenOwnership memory) {
-        return _ownerships[index];
+        return _ownershipAt(index);
     }
 
     function totalMinted() public view returns (uint256) {
         return _totalMinted();
+    }
+
+    function totalBurned() public view returns (uint256) {
+        return _totalBurned();
+    }
+
+    function numberBurned(address owner) public view returns (uint256) {
+        return _numberBurned(owner);
     }
 }

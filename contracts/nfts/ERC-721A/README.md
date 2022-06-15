@@ -3,10 +3,15 @@
 [![CI][ci-shield]][ci-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![Coverage][coverage-shield]][coverage-url]
 <!-- OTHER BADGES -->
 <!-- [![Contributors][contributors-shield]][contributors-url] -->
 <!-- [![Forks][forks-shield]][forks-url] -->
 <!-- [![Stargazers][stars-shield]][stars-url] -->
+
+<!-- ANNOUNCEMENT -->
+
+> **📢 Version 4.x introduces several breaking changes. [Please refer to the documentation for more details.](https://chiru-labs.github.io/ERC721A/#/migration)**
 
 <!-- ABOUT THE PROJECT -->
 
@@ -56,12 +61,12 @@ pragma solidity ^0.8.4;
 import "erc721a/contracts/ERC721A.sol";
 
 contract Azuki is ERC721A {
-  constructor() ERC721A("Azuki", "AZUKI") {}
+    constructor() ERC721A("Azuki", "AZUKI") {}
 
-  function mint(uint256 quantity) external payable {
-    // _safeMint's second argument now takes in a quantity, not a tokenId.
-    _safeMint(msg.sender, quantity);
-  }
+    function mint(uint256 quantity) external payable {
+        // `_mint`'s second argument now takes in a `quantity`, not a `tokenId`.
+        _mint(msg.sender, quantity);
+    }
 }
 
 ```
@@ -70,9 +75,9 @@ contract Azuki is ERC721A {
 
 ## Roadmap
 
-- [] Improve general repo and code quality (workflows, comments, etc.)
-- [] Add more documentation on benefits of using ERC721A
-- [] Increase test coverage
+- [ ] Improve general repo and code quality (workflows, comments, etc.)
+- [ ] Add more documentation on benefits of using ERC721A
+- [ ] Maintain full test coverage
 
 See the [open issues](https://github.com/chiru-labs/ERC721A/issues) for a full list of proposed features (and known issues).
 
@@ -136,4 +141,6 @@ Project Link: [https://github.com/chiru-labs/ERC721A](https://github.com/chiru-l
 [issues-url]: https://github.com/chiru-labs/ERC721A/issues
 [license-shield]: https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge
 [license-url]: https://github.com/chiru-labs/ERC721A/blob/main/LICENSE.txt
+[coverage-shield]: https://img.shields.io/codecov/c/gh/chiru-labs/ERC721A?style=for-the-badge
+[coverage-url]: https://codecov.io/gh/chiru-labs/ERC721A
 [product-screenshot]: images/screenshot.png

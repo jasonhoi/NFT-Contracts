@@ -10,10 +10,7 @@ An owner cannot have more than `2**64 - 1` (max value of `uint64`) tokens.
 
 Inherits:
 
-- [Context](https://docs.openzeppelin.com/contracts/2.x/api/gsn)
-- [IERC721](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721) 
-- [IERC721Metadata](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721Metadata) 
-- [IERC165](https://docs.openzeppelin.com/contracts/4.x/api/utils#IERC165)
+- [IERC721A](interfaces.md#ierc721a) 
 
 ## Structs
 
@@ -34,64 +31,6 @@ Holds ownership data for each token.
 
 `startTimestamp` is the timestamp when the token is minted to, transferred to, or burned by `addr`.
 
-The compiler will pack this into a single 256 bit word in storage.
-
-### AddressData 
-
-```solidity
- struct AddressData {
-    // The token balance of the address. 2**64 - 1 is more than enough.
-    uint64 balance;
-    // Keeps track of mint count with minimal overhead for tokenomics.
-    uint64 numberMinted;
-    // Keeps track of burn count with minimal overhead for tokenomics.
-    uint64 numberBurned;
-    // For miscellaneous variable(s) pertaining to the address
-    // (e.g. number of whitelist mint slots used).
-    // If there are multiple variables, please pack them into a uint64.
-    uint64 aux;
-}
-```
-
-Holds balance and other data for each address.
-
-The compiler will pack this into a single 256 bit word in storage.
-
-## Variables
-
-### \_currentIndex
-
-```solidity
-uint256 internal _currentIndex
-```
-
-The next token ID to be minted.
-
-To get the total number of tokens in existence, please see [`totalSupply`](#totalSupply).
-
-To get the total number of tokens minted, please see [`_totalMinted`](#_totalMinted).
-
-### \_burnCounter
-
-```solidity
-uint256 internal _burnCounter
-```
-
-The number of tokens burned.
-
-### \_ownerships
-
-```solidity
-mapping(uint256 => TokenOwnership) internal _ownerships
-```
-
-Mapping from token ID to ownership details.
-
-An empty struct value does not necessarily mean the token is unowned. 
-
-See [`_ownershipOf`](#_ownershipOf).
-
-
 
 ## Functions
 
@@ -108,14 +47,14 @@ Initializes the contract by setting a `name` and a `symbol` to the token collect
 `IERC165-supportsInterface`
 
 ```solidity
-function supportsInterface(
-    bytes4 interfaceId
-) public view virtual override(ERC165, IERC165) returns (bool)
+function supportsInterface(bytes4 interfaceId) public view virtual returns (bool)
 ```
 
 Returns `true` if this contract implements the interface defined by `interfaceId`. 
 
 See the corresponding [EIP section](https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified) to learn more about how these ids are created.
+
+See [migration](migration.md#supportsInterface) for `supportsInterface`.
 
 ### totalSupply
 
@@ -185,17 +124,8 @@ function tokenURI(uint256 tokenId) public view virtual override returns (string 
 
 Returns the Uniform Resource Identifier (URI) for `tokenId` token.
 
-### \_baseURI
+See [`_baseURI`](#_baseURI) and [`_toString`](#_toString).
 
-```solidity
-function _baseURI() internal view virtual returns (string memory)
-```
-
-Base URI for computing `tokenURI`.
-
-If set, the resulting URI for each token will be the concatenation of the `baseURI` and the `tokenId`.
-
-Empty by default, can be overriden in child contracts.
 
 ### approve
 
@@ -326,6 +256,15 @@ Returns the starting token ID (default: `0`).
 To change the starting token ID, override this function to return a different constant. 
 
 
+### \_nextTokenId
+
+```solidity
+function _nextTokenId() internal view virtual returns (uint256)
+```
+
+Returns the next token ID to be minted.
+
+
 ### \_totalMinted
 
 ```solidity
@@ -342,6 +281,15 @@ function _numberMinted(address owner) internal view returns (uint256)
 
 Returns the number of tokens minted by or on behalf of `owner`.
 
+### \_totalBurned
+
+```solidity
+function _totalBurned() internal view returns (uint256)
+```
+
+Returns the total amount of tokens burned.
+
+
 ### \_numberBurned
 
 ```solidity
@@ -356,7 +304,7 @@ Returns the number of tokens burned by or on behalf of `owner`.
 function _getAux(address owner) internal view returns (uint64)
 ```
 
-Returns the auxillary data for `owner` (e.g. number of whitelist mint slots used).
+Returns the auxiliary data for `owner` (e.g. number of whitelist mint slots used).
 
 ### \_setAux
 
@@ -364,7 +312,7 @@ Returns the auxillary data for `owner` (e.g. number of whitelist mint slots used
 function _setAux(address owner, uint64 aux) internal
 ```
 
-Sets the auxillary data for `owner` (e.g. number of whitelist mint slots used).
+Sets the auxiliary data for `owner` (e.g. number of whitelist mint slots used).
 
 If there are multiple variables, please pack them into a `uint64`.
 
@@ -380,6 +328,30 @@ Returns the token ownership data for `tokenId`. See [`TokenOwnership`](#TokenOwn
 The gas spent here starts off proportional to the maximum mint batch size.
 
 It gradually moves to O(1) as tokens get transferred around in the collection over time. 
+
+
+### \_ownershipAt
+
+```solidity
+function _ownershipAt(uint256 index) internal view returns (TokenOwnership memory)
+```
+
+Returns the token ownership data at the `index` slot. See [`TokenOwnership`](#TokenOwnership).
+
+The token ownership data may or may not be initialized. 
+
+
+### \_initalizeOwnershipAt
+
+```solidity
+function _initalizeOwnershipAt(uint256 index) internal
+```
+
+Initializes the token ownership data at the `index` slot, if it has not been initialized.
+
+If the batch minted is very large, this function can be used to initialize some tokens to 
+reduce the first-time transfer costs.
+
 
 ### \_exists
 
@@ -420,7 +392,10 @@ function _mint(
 
 Mints `quantity` tokens and transfers them to `to`.
 
-> To prevent excessive first-time token transfer costs, please limit the `quantity` to a reasonable number (e.g. `30`). 
+> To prevent excessive first-time token transfer costs, please limit the `quantity` to a reasonable number (e.g. 30).   
+> 
+> Extremely large `quantity` amounts (e.g. > 5000) may result in some marketplaces and indexers to drop some `Transfer` events, 
+> and cause some mints to not appear.
 
 Requirements:
 
@@ -446,6 +421,43 @@ Requirements:
 - If `approvalCheck` is `true`, the caller must own `tokenId` or be an approved operator.
 
 Emits a `Transfer` event.
+
+
+### \_baseURI
+
+```solidity
+function _baseURI() internal view virtual returns (string memory)
+```
+
+Base URI for computing `tokenURI`.
+
+If set, the resulting URI for each token will be the concatenation of the `baseURI` and the `tokenId`.
+
+Empty by default, it can be overridden in child contracts.
+
+
+### \_toString
+
+```solidity
+function _toString(uint256 value) internal pure returns (string memory)
+```
+
+Converts a `uint256` to its ASCII `string` decimal representation.
+
+This function is provided as a drop-in replacement for OpenZeppelin's `Strings.toString(uint256 value)`.
+
+
+### \_msgSenderERC721A
+
+```solidity
+function _msgSenderERC721A() internal view virtual returns (address) 
+```
+
+Returns the message sender (defaults to `msg.sender`). 
+
+If you are writing [GSN compatible contracts](https://docs.openzeppelin.com/contracts/2.x/gsn), 
+you need to override this function   
+(to return `_msgSender()` if using with OpenZeppelin).
 
 ## Events
 

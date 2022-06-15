@@ -33,11 +33,11 @@ To illustrate, we compare OpenZeppelin's ERC721 with ERC721A.
 
 |                            | ERC721       | ERC721A        |
 | -------------------------- | ------------ | -------------- |
-| Batch Mint 5 Tokens        | 155949 gas   | 64009 gas      |
-| Transfer 5 Tokens          | 226655 gas   | 348030 gas     |
+| Batch Mint 5 Tokens        | 155949 gas   | 63748 gas      |
+| Transfer 5 Tokens          | 226655 gas   | 334450 gas     |
 | Mint BASEFEE               | 200 gwei     | 200 gwei       |
 | Transfer BASEFEE           | 40 gwei      | 40 gwei        |
-| Total Transaction Fees     | 0.0403 ether | 0.0267 ether   |
+| Total Transaction Fees     | 0.0403 ether | 0.0261 ether   |
 
 Even for conservatively small batch sizes (e.g. 5), we can observe decent savings over the barebones implementation. 
 
@@ -51,8 +51,8 @@ The main overhead of transferring a token **only occurs during its very first tr
 
 |                            | ERC721       | ERC721A        |
 | -------------------------- | ------------ | -------------- |
-| First transfer             | 45331 gas    | 96078 gas      |
-| Subsequent transfers       | 45331 gas    | 49164 gas      |
+| First transfer             | 45331 gas    | 92822 gas      |
+| Subsequent transfers       | 45331 gas    | 44499 gas      |
 
 Here, we bulk mint 10 tokens, and compare the transfer costs of the 5th token in the batch.
 
@@ -62,10 +62,6 @@ The first transfer with ERC721A will incur the storage overheads:
 
 - 2 extra `SSTORE`s (initialize current slot and next slot, both of which are empty).
 - 5 extra `SLOAD`s (read previous slots and next slot).
-
-Subsequent transfers with ERC721A will only incur the storage overheads:
-
-- 1 extra `SLOAD` (read next slot).
 
 ## Balance Mapping
 
@@ -83,7 +79,7 @@ ERC721A maintains an internal mapping of address balances. This is an important 
 
 - In the context of saving gas, we are able to allow whitelist minting achieve the same amount of `SSTORE`s when compared to implementations without the mapping. See `ERC721A._getAux` and `ERC721A._setAux`. 
 
-  The address balance mapping is also used to store the mint and burn counts per address with neligible overhead, which can be very useful for tokenomics.
+  The address balance mapping is also used to store the mint and burn counts per address with negligible overhead, which can be very useful for tokenomics.
 
 In all, the address balance mapping gives a good balance of features and gas savings, which makes it desirable to keep.
 

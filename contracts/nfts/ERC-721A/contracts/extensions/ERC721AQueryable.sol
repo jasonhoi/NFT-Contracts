@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// ERC721A Contracts v3.3.0
+// ERC721A Contracts v4.1.0
 // Creator: Chiru Labs
 
 pragma solidity ^0.8.4;
@@ -19,23 +19,26 @@ abstract contract ERC721AQueryable is ERC721A, IERC721AQueryable {
      *   - `addr` = `address(0)`
      *   - `startTimestamp` = `0`
      *   - `burned` = `false`
+     *   - `extraData` = `0`
      *
      * If the `tokenId` is burned:
      *   - `addr` = `<Address of owner before token was burned>`
      *   - `startTimestamp` = `<Timestamp when token was burned>`
      *   - `burned = `true`
+     *   - `extraData` = `<Extra data when token was burned>`
      *
      * Otherwise:
      *   - `addr` = `<Address of owner>`
      *   - `startTimestamp` = `<Timestamp of start of ownership>`
      *   - `burned = `false`
+     *   - `extraData` = `<Extra data at start of ownership>`
      */
     function explicitOwnershipOf(uint256 tokenId) public view override returns (TokenOwnership memory) {
         TokenOwnership memory ownership;
-        if (tokenId < _startTokenId() || tokenId >= _currentIndex) {
+        if (tokenId < _startTokenId() || tokenId >= _nextTokenId()) {
             return ownership;
         }
-        ownership = _ownerships[tokenId];
+        ownership = _ownershipAt(tokenId);
         if (ownership.burned) {
             return ownership;
         }
@@ -77,12 +80,12 @@ abstract contract ERC721AQueryable is ERC721A, IERC721AQueryable {
         unchecked {
             if (start >= stop) revert InvalidQueryRange();
             uint256 tokenIdsIdx;
-            uint256 stopLimit = _currentIndex;
+            uint256 stopLimit = _nextTokenId();
             // Set `start = max(start, _startTokenId())`.
             if (start < _startTokenId()) {
                 start = _startTokenId();
             }
-            // Set `stop = min(stop, _currentIndex)`.
+            // Set `stop = min(stop, stopLimit)`.
             if (stop > stopLimit) {
                 stop = stopLimit;
             }
@@ -111,7 +114,7 @@ abstract contract ERC721AQueryable is ERC721A, IERC721AQueryable {
                 currOwnershipAddr = ownership.addr;
             }
             for (uint256 i = start; i != stop && tokenIdsIdx != tokenIdsMaxLength; ++i) {
-                ownership = _ownerships[i];
+                ownership = _ownershipAt(i);
                 if (ownership.burned) {
                     continue;
                 }
@@ -148,7 +151,7 @@ abstract contract ERC721AQueryable is ERC721A, IERC721AQueryable {
             uint256[] memory tokenIds = new uint256[](tokenIdsLength);
             TokenOwnership memory ownership;
             for (uint256 i = _startTokenId(); tokenIdsIdx != tokenIdsLength; ++i) {
-                ownership = _ownerships[i];
+                ownership = _ownershipAt(i);
                 if (ownership.burned) {
                     continue;
                 }

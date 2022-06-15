@@ -1,6 +1,6 @@
 {
   "name": "erc721a",
-  "version": "3.3.0",
+  "version": "4.1.0",
   "description": "ERC721A contract for Solidity",
   "files": [
     "/contracts/**/*.sol",
@@ -16,9 +16,6 @@
     "lint:js": "eslint --ignore-path .gitignore . --fix",
     "lint:sol": "prettier --write \"contracts/**/*.sol\"",
     "update-version": "scripts/release/update-version.js"
-  },
-  "dependencies": {
-    "@openzeppelin/contracts": "^4.4.2"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.4",
