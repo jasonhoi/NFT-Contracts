@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.10;
 
-import "abdk-libraries-solidity/ABDKMath64x64.sol";
+import "./abdk-libraries-solidity/ABDKMath64x64.sol";
 
 library Math {
     function min(uint256 a, uint256 b) external pure returns (uint256) {
