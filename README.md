@@ -42,6 +42,7 @@ This repo record some smart contract sample codes and techniques.
 - [contracts/nfts/ProofOfMerge](https://etherscan.io/address/0xf4dd946d1406e215a87029db56c69e1bcf3e1773) Proof of Merge
 - [contracts/nfts/ENS.sol](https://etherscan.io/address/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85#code) ENS
 - [contracts/nfts/OpenSea/seaport-v1.1](https://etherscan.io/address/0x00000000006c3852cbef3e08e8df289169ede581#code) OpenSea Seaport v1.1
+- [contracts/nfts/RedditCollectibleAvatars (Polygon)](https://polygonscan.com/address/0x63992726dac0752c394a6419fe14d595dc3ba441#code) RedditCollectibleAvatars (upgradeable contract)
 
 ### HOW-TO techniques
 
