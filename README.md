@@ -25,6 +25,7 @@ This repo record some smart contract sample codes and techniques.
 - [contracts/nfts/ConiunIO-ERC721A](https://etherscan.io/address/0x03ef30e1aee25abd320ad961b8cd31aa1a011c97)
 - [contracts/nfts/ConiunIO-ERC721A/CBOXRandomSeedGenerator.sol](https://etherscan.io/address/0xaf8BFFf3962E49afaEA9e49BbaFAb57F4daa77E0) Coniun CBox random seed generator
 - [contracts/nfts/Doodles/SpaceDoodles](https://etherscan.io/address/0x620b70123fb810f6c653da7644b5dd0b6312e4d8)
+- [contracts/nfts/Doodles/Dooplicator](https://etherscan.io/address/0x466cfcd0525189b573e794f554b8a751279213ac) ERC721A Dooplicator
 - [contracts/nfts/MURI](https://etherscan.io/address/0x4b61413d4392c806e6d0ff5ee91e6073c21d6430) ERC721A NFT
 - [contracts/nfts/LateDAO](https://etherscan.io/address/0x9717e477cc5869a4a228361492b9bf7b8db58582) ERC721A NFT with ECDSA whitelisting
 - [contracts/nfts/CyberBrokers](https://etherscan.io/address/0x892848074ddea461a15f337250da3ce55580ca85) A first-of-its-kind NFT fully on-chain SVG JSON data
