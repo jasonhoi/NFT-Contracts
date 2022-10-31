@@ -43,6 +43,7 @@ This repo record some smart contract sample codes and techniques.
 - [contracts/nfts/ENS.sol](https://etherscan.io/address/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85#code) ENS
 - [contracts/nfts/OpenSea/seaport-v1.1](https://etherscan.io/address/0x00000000006c3852cbef3e08e8df289169ede581#code) OpenSea Seaport v1.1
 - [contracts/nfts/RedditCollectibleAvatars (Polygon)](https://polygonscan.com/address/0x63992726dac0752c394a6419fe14d595dc3ba441#code) RedditCollectibleAvatars (upgradeable contract)
+- [contracts/nfts/LlamaLend/*](https://etherscan.io/address/0x55F9F26b3d7a4459205c70994c11775629530eA5) LlamaLend NFT lending platform `https://llamalend.com/`.
 
 ### HOW-TO techniques
 
