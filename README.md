@@ -2,6 +2,11 @@
 
 This repo record some smart contract sample codes and techniques.
 
+## Other projects
+
+- [contracts/others/Lido](https://etherscan.io/address/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84#readProxyContract) Lido proxy contract
+- [contracts/others/Lido](https://etherscan.io/address/0x47ebab13b806773ec2a2d16873e2df770d130b50#code) Lido implementation contract
+
 ## NFT projects
 
 - [contracts/nfts/@chainlink](https://openzeppelin.com/) Chainlink contracts
