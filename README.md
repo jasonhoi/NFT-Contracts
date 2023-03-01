@@ -2,10 +2,12 @@
 
 This repo record some smart contract sample codes and techniques.
 
-## Other projects
-
-- [contracts/others/Lido](https://etherscan.io/address/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84#readProxyContract) Lido proxy contract
-- [contracts/others/Lido](https://etherscan.io/address/0x47ebab13b806773ec2a2d16873e2df770d130b50#code) Lido implementation contract
+## ERC20 projects
+- [contracts/erc20/XEN/XEN](https://etherscan.io/address/0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8) XEN Crypto main contract
+- [contracts/erc20/XEN/NFT](https://etherscan.io/address/0x0a252663DBCc0b073063D6420a40319e438Cfa59) XEN Crypto NFT
+- [contracts/erc20/Lido](https://etherscan.io/address/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84#readProxyContract) Lido proxy contract
+- [contracts/erc20/Lido](https://etherscan.io/address/0x47ebab13b806773ec2a2d16873e2df770d130b50#code) Lido implementation contract
+- [contracts/erc20/Uniswap/merkle-distributor-master](https://github.com/Uniswap/merkle-distributor) Uniswap airdrop distributor
 
 ## NFT projects
 
