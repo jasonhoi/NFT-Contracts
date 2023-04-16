@@ -3,6 +3,7 @@
 This repo record some smart contract sample codes and techniques.
 
 ## ERC20 projects
+- [contracts/erc20/XEN/DBXen](https://etherscan.io/address/0xf5c80c305803280b587f8cabbccdc4d9bf522abd#code) DBXen
 - [contracts/erc20/XEN/XEN](https://etherscan.io/address/0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8) XEN Crypto main contract
 - [contracts/erc20/XEN/NFT](https://etherscan.io/address/0x0a252663DBCc0b073063D6420a40319e438Cfa59) XEN Crypto NFT
 - [contracts/erc20/Lido](https://etherscan.io/address/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84#readProxyContract) Lido proxy contract
