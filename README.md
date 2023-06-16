@@ -3,6 +3,7 @@
 This repo record some smart contract sample codes and techniques.
 
 ## ERC20 projects
+
 - [contracts/erc20/XEN/DBXen](https://etherscan.io/address/0xf5c80c305803280b587f8cabbccdc4d9bf522abd#code) DBXen
 - [contracts/erc20/XEN/XEN](https://etherscan.io/address/0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8) XEN Crypto main contract
 - [contracts/erc20/XEN/NFT](https://etherscan.io/address/0x0a252663DBCc0b073063D6420a40319e438Cfa59) XEN Crypto NFT
@@ -51,16 +52,17 @@ This repo record some smart contract sample codes and techniques.
 - [contracts/nfts/ENS.sol](https://etherscan.io/address/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85#code) ENS
 - [contracts/nfts/OpenSea/seaport-v1.1](https://etherscan.io/address/0x00000000006c3852cbef3e08e8df289169ede581#code) OpenSea Seaport v1.1
 - [contracts/nfts/RedditCollectibleAvatars (Polygon)](https://polygonscan.com/address/0x63992726dac0752c394a6419fe14d595dc3ba441#code) RedditCollectibleAvatars (upgradeable contract)
-- [contracts/nfts/LlamaLend/*](https://etherscan.io/address/0x55F9F26b3d7a4459205c70994c11775629530eA5) LlamaLend NFT lending platform `https://llamalend.com/`.
+- [contracts/nfts/LlamaLend/\*](https://etherscan.io/address/0x55F9F26b3d7a4459205c70994c11775629530eA5) LlamaLend NFT lending platform `https://llamalend.com/`.
 - [contracts/nfts/Porsche](https://etherscan.io/address/0xccdf1373040d9ca4b5be1392d1945c1dae4a862c#code) Porsche - RoadsToDreams NFT
 - [contracts/nfts/OnTheEdgeOfOblivion-BTC-bridged-NFT](https://etherscan.io/address/0x48e934457d3082cd4068d10c80daace98378409f) On the edge of oblivion
 - [contracts/nfts/Nakamigos](https://etherscan.io/address/0xd774557b647330c91bf44cfeab205095f7e6c367#code) Nakamigos NFT
+- [contracts/nfts/WPUNKS](https://www.wrappedpunks.com/) WrappedPunk, consists of 2 contracts, https://opensea.io/collection/wrapped-cryptopunks
 
 ### HOW-TO techniques
 
-- [contracts/nfts/HOW-TO-ProxyRegistry-Opensea/*](https://gist.github.com/dievardump/483eb43bc6ed30b14f01e01842e3339b): (Use in your own risk as it can be dangerous) How to work with proxy registry for Opensea addresses
-- [contracts/nfts/HOW-TO-SignMessage-ECDSA/*](https://docs.openzeppelin.com/contracts/2.x/utilities): How to do ECDSA signature
-- [contracts/nfts/HOW-TO-Random-Basic/*](https://fravoll.github.io/solidity-patterns/randomness.html): How to do basic on-chain randomness
+- [contracts/nfts/HOW-TO-ProxyRegistry-Opensea/\*](https://gist.github.com/dievardump/483eb43bc6ed30b14f01e01842e3339b): (Use in your own risk as it can be dangerous) How to work with proxy registry for Opensea addresses
+- [contracts/nfts/HOW-TO-SignMessage-ECDSA/\*](https://docs.openzeppelin.com/contracts/2.x/utilities): How to do ECDSA signature
+- [contracts/nfts/HOW-TO-Random-Basic/\*](https://fravoll.github.io/solidity-patterns/randomness.html): How to do basic on-chain randomness
 
 ## Chainlink codes
 
