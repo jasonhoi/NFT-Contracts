@@ -2,6 +2,16 @@
 
 This repo record some smart contract sample codes and techniques.
 
+## ERC404
+
+- [contracts/erc404/Pandora/Pandora.sol](https://etherscan.io/address/0x9e9fbde7c7a83c43913bddc8779158f1368f0413) Pandora NFT
+- [contracts/erc404/Pandora/erc404-v1](https://etherscan.io/address/0x9e9fbde7c7a83c43913bddc8779158f1368f0413) Pandora NFT
+- [contracts/erc404/Pandora/erc404-v2](https://github.com/Pandora-Labs-Org/erc404) Pandora NFT
+
+## ERC4973
+
+- [contracts/erc4973/ERC4973-flat.sol](https://github.com/attestate/ERC4973/blob/master/assets/ERC4973-flat.sol) ERC4973
+
 ## ERC20 projects
 
 - [contracts/erc20/XEN/DBXen](https://etherscan.io/address/0xf5c80c305803280b587f8cabbccdc4d9bf522abd#code) DBXen
